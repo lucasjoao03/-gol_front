@@ -76,4 +76,18 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
       {title: 'Perfil', path: '/perfil/perfil'},
     ]
   },
+
+  
+  {
+    title: 'Coach',
+    path: '/coach',
+    icon: <Icon icon="ph:chalkboard-teacher-duotone" width="24" height="24" />,
+    submenu: true,
+    subMenuItems: [
+      {title: 'Infos', path: '/coach/infos'},
+      {title: 'Cadastrar', path: '/coach/create'},
+      {title: 'Editar', path: '/coach/edit'},
+    ]
+  },
+
 ];
