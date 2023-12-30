@@ -92,10 +92,19 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
   {
     title: 'Responsável',
     path: '/guardian',
-    icon: <Icon icon="mdi:guardian" width="24" height="24" />,
+    icon: <Icon icon="mdi:guardian" width="25" height="25" />,
     submenu: true,
     subMenuItems: [
       {title: 'Cadastrar', path: '/guardian/create'}
+    ]
+  },
+  {
+    title: 'Grupos',
+    path: '/group',
+    icon: <Icon icon="ic:round-groups" width="25" height="25" />,
+    submenu: true,
+    subMenuItems: [
+      {title: 'Cadastrar', path: '/group/create'}
     ]
   },
 
