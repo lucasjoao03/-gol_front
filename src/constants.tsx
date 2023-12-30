@@ -79,14 +79,23 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
 
   
   {
-    title: 'Coach',
+    title: 'Treinador',
     path: '/coach',
     icon: <Icon icon="ph:chalkboard-teacher-duotone" width="24" height="24" />,
     submenu: true,
     subMenuItems: [
-      {title: 'Infos', path: '/coach/infos'},
+      {title: 'Informações', path: '/coach/infos'},
       {title: 'Cadastrar', path: '/coach/create'},
       {title: 'Editar', path: '/coach/edit'},
+    ]
+  },
+  {
+    title: 'Responsável',
+    path: '/guardian',
+    icon: <Icon icon="mdi:guardian" width="24" height="24" />,
+    submenu: true,
+    subMenuItems: [
+      {title: 'Cadastrar', path: '/guardian/create'}
     ]
   },
 
