@@ -73,43 +73,42 @@ const CoachList = () => {
                     </div>
                 </div>
             </div>
-            <table className="min-w-full">
-                <thead>
-                    <tr>
-                        <th className="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-blue-500 tracking-wider">Nome</th>
-                        <th className="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-blue-500 tracking-wider">CPF</th>
-                        <th className="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-blue-500 tracking-wider">Telefone</th>
-                        <th className="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-blue-500 tracking-wider">Status</th>
-                        <th className="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-blue-500 tracking-wider">Data de nascimento</th>
-                        <th className="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-blue-500 tracking-wider">Treinos</th>
-                        <th className="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-blue-500 tracking-wider">Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {coaches.map(coach => (
-                        <tr key={coach.id}>
-                            <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">{coach.name}</td>
-                            <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">{coach.cpf}</td>
-                            <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">{coach.phone}</td>
-                            <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">{coach.status}</td>
-                            <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">{coach.birthDay.join('/')}</td>
-                            <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
-                                {/* Aqui você pode mapear os treinos, se houver */}
-                            </td>
-                            <td>
-                            <button onClick={() => handleEditClick(coach.id)}>
-                                Editar
-                            </button>
-                            <button onClick={() => handleInactiveClick(coach.id)}>
-                                    Tornar Inativo
-                                </button>
-                            
-                            </td>
+            <div className="w-full max-h-[500px] overflow-auto">
+                <table className="min-w-full" >
+                    <thead>
+                        <tr>
+                            <th className="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-blue-500 tracking-wider">Nome</th>
+                            <th className="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-blue-500 tracking-wider">CPF</th>
+                            <th className="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-blue-500 tracking-wider">Telefone</th>
+                            <th className="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-blue-500 tracking-wider">Status</th>
+                            <th className="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-blue-500 tracking-wider">Data de nascimento</th>
+                            <th className="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-blue-500 tracking-wider">Ações</th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
-
+                    </thead>
+                    <tbody>
+                        {coaches.map(coach => (
+                            <tr key={coach.id}>
+                                <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">{coach.name}</td>
+                                <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">{coach.cpf}</td>
+                                <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">{coach.phone}</td>
+                                <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">{coach.status}</td>
+                                <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">{coach.birthDay.join('/')}</td>
+                                <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
+                                <button className="bg-blue-500 hover:bg-blue-800 text-white py-2 px-4 rounded"
+                                        onClick={() => handleEditClick(coach.id)} style={{marginRight: '1em'}}>
+                                    Editar
+                                </button>
+                                <button className="bg-blue-500 hover:bg-blue-800 text-white py-2 px-4 rounded"
+                                        onClick={() => handleInactiveClick(coach.id)}>
+                                        Inativo
+                                    </button>
+                                
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
             <ToastContainer/>
         </div>
     );
