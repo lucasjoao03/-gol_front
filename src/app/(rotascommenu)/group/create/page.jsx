@@ -29,7 +29,8 @@ const CoachRegistration = () => {
                 throw new Error(`HTTP error! status: ${response.status}`);
 
             }else {
-                toast.success('Grupo cadastrado com sucesso!');
+                toast.success('Turma cadastrada com sucesso!');
+
             }
 
             const result = await response.json();
@@ -63,7 +64,7 @@ const CoachRegistration = () => {
                     </label>
                     <input
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="description" type="text" placeholder="descrição" name="cpf" value={formData.cpf} onChange={handleChange} />
+                        id="description" type="text" placeholder="descrição" name="description" value={formData.description} onChange={handleChange} />
                 </div>
                 <div className="flex items-center justify-between">
                     <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
