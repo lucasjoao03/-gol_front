@@ -99,12 +99,14 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     ]
   },
   {
-    title: 'Grupos',
+    title: 'Turmas',
     path: '/group',
     icon: <Icon icon="ic:round-groups" width="25" height="25" />,
     submenu: true,
     subMenuItems: [
-      {title: 'Cadastrar', path: '/group/create'}
+      {title: 'Cadastrar', path: '/group/create'},
+      {title: 'Informações', path: '/group/infos'},
+      {title: 'Editar', path: '/group/edit'}
     ]
   },
 
