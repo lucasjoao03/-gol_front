@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const GroupList = () => {
@@ -81,7 +81,12 @@ const GroupList = () => {
                 <div>
                   <h2 className="font-bold text-lg mb-2">{group.name}</h2>
                   <p>{group.description}</p>
-                  <span className={`inline-block rounded-full text-xs font-semibold mr-2 px-2.5 py-0.5 ${group.status === 'ACTIVE' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+                  <span className={`inline-block rounded-full text-xs font-semibold mr-2 px-2.5 py-0.5 ${group.status === 'ACTIVE'
+                      ? 'bg-green-100 text-green-800'
+                      : group.status === 'VACATION'
+                        ? 'bg-yellow-100 text-yellow-800'
+                        : 'bg-red-100 text-red-800'
+                    }`}>
                     {group.status}
                   </span>
                 </div>
@@ -101,7 +106,7 @@ const GroupList = () => {
         </div>
       </div>
 
-
+      <ToastContainer />
     </div>
   );
 };
