@@ -81,12 +81,13 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
   {
     title: 'Treinador',
     path: '/coach',
-    icon: <Icon icon="ph:chalkboard-teacher-duotone" width="24" height="24" />,
+    icon: <Icon icon="ph:chalkboard-teacher-bold" width="24" height="24" />,
     submenu: true,
     subMenuItems: [
       {title: 'Informações', path: '/coach/infos'},
       {title: 'Cadastrar', path: '/coach/create'},
-      {title: 'Editar', path: '/coach/edit'},
+      //{title: 'Editar', path: '/coach/edit'},
+      //{title: 'Treinos', path: '/coach/trainings'}
     ]
   },
   {
@@ -106,7 +107,27 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     subMenuItems: [
       {title: 'Cadastrar', path: '/group/create'},
       {title: 'Informações', path: '/group/infos'},
-      {title: 'Editar', path: '/group/edit'}
+      //{title: 'Editar', path: '/group/edit'}
+    ]
+  },
+  {
+    title: 'Alunos',
+    path: '/athlete',
+    icon: <Icon icon="ic:baseline-person" width="25" height="25" />,
+    submenu: true,
+    subMenuItems: [
+      {title: 'Cadastrar', path: '/athlete/create'},
+      {title: 'Informações', path: '/athlete/infos'}
+      
+    ]
+  },
+  {
+    title: 'Treinos',
+    path: '/training',
+    icon: <Icon icon="mdi:application-edit" width="20" height="20" />,
+    submenu: true,
+    subMenuItems: [
+      {title: 'Cadastrar', path: '/training/create'}
     ]
   },
 
