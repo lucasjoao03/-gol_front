@@ -44,7 +44,7 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     title: 'Help Desk',
     path: '/help-desk',
     icon: <Icon icon="lucide:mail" width="24" height="24" />,
-    submenu: true, 
+    submenu: true,
     subMenuItems: [
       {title: 'Demandas', path: '/help-desk/demandas'}
     ]
