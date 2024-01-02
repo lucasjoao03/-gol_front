@@ -8,7 +8,7 @@ const CoachList = () => {
     const [guardians, setGuardians] = useState([]);
 
     useEffect(() => {
-        const fetchCoaches = async () => {
+        const fetchGuardians = async () => {
             try {
                 const response = await fetch('http://localhost:8080/guardian');
                 if (!response.ok) {
@@ -21,12 +21,12 @@ const CoachList = () => {
             }
         };
 
-        fetchCoaches();
+        fetchGuardians();
     }, []);
 
-    /* const handleEditClick = async (coachId) => {
-        localStorage.setItem('editingCoachId', coachId);
-        window.location.href = '/coach/edit';
+    /* const handleEditClick = async (guardianId) => {
+        localStorage.setItem('editingGuardianId', guardianId);
+        window.location.href = '/guardian/edit';
     }; */
 
     const formataCpf = (cpf) => {
