@@ -38,7 +38,8 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     icon: <Icon icon="mdi:guardian" width="25" height="25" />,
     submenu: true,
     subMenuItems: [
-      {title: 'Cadastrar', path: '/guardian/create'}
+      {title: 'Cadastrar', path: '/guardian/create'},
+      {title: 'Informações', path: '/guardian/infos'}
     ]
   },
   
