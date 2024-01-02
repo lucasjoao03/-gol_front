@@ -82,7 +82,7 @@ const GroupList = () => {
                   <h2 className="font-bold text-lg mb-2">{group.name}</h2>
                   <p>{group.description}</p>
                   <span className={`inline-block rounded-full text-xs font-semibold mr-2 px-2.5 py-0.5 ${group.status === 'ACTIVE'
-                      ? 'bg-green-100 text-green-800'
+                      ? 'bg-blue-100 text-blue-800'
                       : group.status === 'VACATION'
                         ? 'bg-yellow-100 text-yellow-800'
                         : 'bg-red-100 text-red-800'
@@ -91,11 +91,11 @@ const GroupList = () => {
                   </span>
                 </div>
                 <div className="mt-4">
-                  <button className="bg-blue-500 hover:bg-blue-800 text-white py-1 px-3 rounded text-sm mr-2"
+                  <button className="bg-green-500 hover:bg-green-800 text-white py-1 px-3 rounded text-sm mr-2"
                     onClick={() => handleEditClick(group.id)}>
                     Editar
                   </button>
-                  <button className="bg-blue-500 hover:bg-blue-800 text-white py-1 px-3 rounded text-sm"
+                  <button className="bg-green-500 hover:bg-green-800 text-white py-1 px-3 rounded text-sm"
                     onClick={() => handleInactiveClick(group.id)}>
                     Inativo
                   </button>

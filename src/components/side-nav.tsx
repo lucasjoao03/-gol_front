@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -17,7 +17,7 @@ const SideNav = () => {
           href="/"
           className="flex flex-row space-x-3 items-center justify-center md:justify-start md:px-6 border-b border-zinc-200 h-12 w-full"
         >
-          <span className="h-7 w-7 bg-zinc-300 rounded-lg" />
+          <Icon icon="fluent:sport-soccer-20-filled" width={24} height={24}/>
           <span className="font-bold text-xl hidden md:flex">+GOL</span>
         </Link>
 

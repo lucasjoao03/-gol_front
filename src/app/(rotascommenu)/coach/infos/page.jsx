@@ -39,6 +39,13 @@ const CoachList = () => {
         window.location.href = '/coach/trainings';
     };
 
+    const formataCpf = (cpf) => {
+        return `${cpf.slice(0, 3)}.${cpf.slice(3, 6)}.${cpf.slice(6, 9)}-${cpf.slice(9, 11)}`;
+    };
+
+    const formataPhone = (phone) => {
+        return `(${phone.slice(0, 2)}) ${phone.slice(2, 3)}${phone.slice(3, 7)}-${phone.slice(7, 11)}`;
+    }
 
     const handleInactiveClick = async (coachId) => {
         try {
@@ -89,25 +96,25 @@ const CoachList = () => {
                         />
                         <div className="p-4">
                             <h3 className="font-bold text-lg">{coach.name}</h3>
-                            <p className="text-gray-700">Responsável: {coach.cpf}</p>
-                            <p className="text-gray-700">Altura: {coach.phone}</p>
+                            <p className="text-gray-700">Cpf: {formataCpf(coach.cpf)}</p>
+                            <p className="text-gray-700">Telefone: {formataPhone(coach.phone)}</p>
                             <p className={`inline-block rounded-full text-xs font-semibold mr-2 px-2.5 py-0.5 ${coach.status === 'ACTIVE'
-                                        ? 'bg-green-100 text-green-800'
+                                        ? 'bg-blue-100 text-blue-800'
                                         : coach.status === 'VACATION'
                                         ? 'bg-yellow-100 text-yellow-800'
                                         : 'bg-red-100 text-red-800'
                                         }`}>{coach.status}
                             </p>
-                            <div className="pt-3 flex justify-center gap-2"> {/* Adicionando div para os botões */}
-                                <button className="bg-blue-500 hover:bg-blue-800 text-white py-1 px-3 rounded text-sm"
+                            <div className="pt-3 flex justify-center gap-2">
+                                <button className="bg-green-500 hover:bg-green-800 text-white py-1 px-3 rounded text-sm"
                                 onClick={() => handleEditClick(coach.id)}>
                                 Editar
                                 </button>
-                                <button className="bg-blue-500 hover:bg-blue-800 text-white py-1 px-3 rounded text-sm"
+                                <button className="bg-green-500 hover:bg-green-800 text-white py-1 px-3 rounded text-sm"
                                 onClick={() => handleInactiveClick(coach.id)}>
                                 Tornar Inativo
                                 </button>
-                                <button className="bg-blue-500 hover:bg-blue-800 text-white py-1 px-3 rounded text-sm"
+                                <button className="bg-green-500 hover:bg-green-800 text-white py-1 px-3 rounded text-sm"
                                 onClick={() => handleTrainingClick(coach.cpf)}>
                                 Ver Treinos
                                 </button>

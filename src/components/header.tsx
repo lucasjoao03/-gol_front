@@ -1,7 +1,7 @@
 'use client';
 
-import React from 'react';
 
+import { Icon } from '@iconify/react';
 import Link from 'next/link';
 import { useSelectedLayoutSegment } from 'next/navigation';
 
@@ -28,7 +28,7 @@ const Header = () => {
             href="/"
             className="flex flex-row space-x-3 items-center justify-center md:hidden"
           >
-            <span className="h-7 w-7 bg-zinc-300 rounded-lg" />
+            <Icon icon= "fluent:sport-soccer-20-filled" width={24} height={24}/>
             <span className="font-bold text-xl flex ">+GOL</span>
           </Link>
         </div>

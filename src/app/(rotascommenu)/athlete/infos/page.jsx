@@ -34,6 +34,8 @@ const Athlete = () => {
         window.location.href = '/coa/edit';
     }; */
 
+    
+
     const handleInactiveClick = async (athleteId) => {
         try {
             const response = await fetch(`http://localhost:8080/athlete/${athleteId}`, {
@@ -88,11 +90,11 @@ const Athlete = () => {
                             <p className="text-gray-700">Turma: {athlete.group.name}</p>
                             <p className={`inline-block rounded-full text-xs font-semibold mr-2 px-2.5 py-0.5
                                         ${athlete.status === 'ACTIVE'
-                                        ? 'bg-green-100 text-green-800'
+                                        ? 'bg-blue-100 text-blue-800'
                                         :'bg-red-100 text-red-800'
                                         }`}>{athlete.status}
                             </p>
-                            <button className="bg-blue-500 hover:bg-blue-800 text-white py-1 px-3 rounded text-sm mt-3"
+                            <button className="bg-green-500 hover:bg-green-800 text-white py-1 px-3 rounded text-sm mt-3"
                                     onClick={() => handleInactiveClick(athlete.id)}>
                                     Tornar Inativo
                             </button>

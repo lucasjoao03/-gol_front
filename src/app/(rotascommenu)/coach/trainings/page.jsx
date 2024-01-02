@@ -36,7 +36,7 @@ const CoachListTrainings = () => {
             {coaches.length > 0 ? (
                 coaches.map((coach, index) => (
                     <div key={index} className="bg-white shadow-lg rounded-lg p-4 mb-4">
-                        <h2 className="text-xl font-bold mb-2">Grupo: {coach.groupName}</h2>
+                        <h2 className="text-xl font-bold mb-2">Turma: {coach.groupName}</h2>
                         {coach.schedules.map((schedule, idx) => (
                             <div key={idx} className="mb-2">
                                 <p><strong>Dia da Semana:</strong> {schedule.dayOfWeek}</p>
